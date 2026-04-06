@@ -1,0 +1,135 @@
+---
+import ArrowUpRight from 'phosphor-astro/ArrowUpRight.astro';
+import ChatCenteredText from 'phosphor-astro/ChatCenteredText.astro';
+import DownloadSimple from 'phosphor-astro/DownloadSimple.astro';
+import Gavel from 'phosphor-astro/Gavel.astro';
+import Handshake from 'phosphor-astro/Handshake.astro';
+import Scroll from 'phosphor-astro/Scroll.astro';
+import WheelchairMotion from 'phosphor-astro/WheelchairMotion.astro';
+
+const stats = [
+  { label: 'Taux de réussite', value: '20 apprenants' },
+  { label: 'Nombre de stagiaires formés', value: '20' },
+  { label: 'Taux de satisfaction', value: '100%' },
+  { label: "Taux d'abandon", value: '0' },
+];
+
+const items = [
+  {
+    title: 'Médiation et réclamation',
+    description:
+      'Déposez votre réclamation via un formulaire dédié. Votre demande est enregistrée et traitée dans les meilleurs délais.',
+    href: '/information-pratique/reclamation-mediation',
+    icon: ChatCenteredText,
+    cta: 'Consulter la page',
+  },
+  {
+    title: "Livret d'accueil",
+    description:
+      "Consultez les informations essentielles sur le déroulé des formations, les règles et les modalités d'accompagnement.",
+    href: '/documents/livret-accueil-saniform.pdf',
+    icon: DownloadSimple,
+    cta: 'Télécharger le PDF',
+    download: true,
+  },
+  {
+    title: 'Règlement intérieur',
+    description:
+      'Règles applicables pendant le parcours de formation, disponibles au format PDF.',
+    href: '/information-pratique/reglement-interieur',
+    icon: Gavel,
+    cta: 'Consulter le document',
+  },
+  {
+    title: 'Conditions générales de vente',
+    description:
+      'Retrouvez les modalités contractuelles, administratives et financières applicables aux prestations Saniform.',
+    href: '/documents/cgv-saniform.pdf',
+    icon: Scroll,
+    cta: 'Télécharger les CGV',
+    download: true,
+  },
+  {
+    title: 'Engagement déontologique',
+    description:
+      'Nos principes de confidentialité, de neutralité, de respect et de qualité pédagogique.',
+    href: '/documents/engagement-deontologique-saniform.pdf',
+    icon: Handshake,
+    cta: "Télécharger l'engagement",
+    download: true,
+  },
+  {
+    title: 'Accessibilité handicap',
+    description:
+      "Informations relatives à l'accueil, à l'adaptation et à l'accompagnement des personnes en situation de handicap.",
+    href: '/information-pratique/accessibilite-handicap',
+    icon: WheelchairMotion,
+    cta: "Voir l'accessibilité",
+  },
+];
+---
+
+<section class="bg-background">
+  <div class="container py-16 sm:py-20">
+    <div class="max-w-3xl">
+      <h1 class="font-display text-3xl leading-[1.05] sm:text-4xl lg:text-5xl">
+        Informations pratiques
+      </h1>
+      <p class="text-muted-foreground mt-4 text-base leading-7 sm:text-lg">
+        Retrouvez les documents et informations utiles liés à l’activité de formation
+        Saniform, dans un format clair et facile à consulter.
+      </p>
+    </div>
+
+    <div class="mt-10 rounded-[30px] border border-border/70 bg-card/20 p-5 sm:p-8">
+      <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        {stats.map((stat) => (
+          <div class="rounded-[22px] border border-border/70 bg-white px-5 py-5">
+            <p class="text-foreground/80 text-xs font-semibold uppercase tracking-[0.16em]">
+              {stat.label}
+            </p>
+            <p class="mt-4 text-3xl font-semibold text-primary">{stat.value}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-10 space-y-5">
+      {items.map((item) => {
+        const Icon = item.icon;
+
+        return (
+          <a
+            href={item.href}
+            download={item.download}
+            class="group flex rounded-[28px] border border-border/70 bg-white px-6 py-7 transition-colors hover:bg-muted/25 sm:px-8"
+          >
+            <div class="flex w-full flex-col gap-5 sm:flex-row sm:items-start">
+              <div class="bg-primary/8 text-primary flex size-[62px] shrink-0 items-center justify-center rounded-[18px]">
+                <Icon class="size-8" />
+              </div>
+
+              <div class="min-w-0 flex-1">
+                <div class="flex items-start justify-between gap-4">
+                  <h2 class="text-foreground text-[1.9rem] leading-tight font-semibold">
+                    {item.title}
+                  </h2>
+                  <ArrowUpRight class="text-foreground mt-1 hidden size-5 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 sm:block" />
+                </div>
+
+                <p class="text-muted-foreground mt-3 max-w-4xl text-base leading-8 sm:text-[1.12rem]">
+                  {item.description}
+                </p>
+
+                <div class="mt-5 inline-flex items-center gap-2 text-base font-medium text-primary">
+                  {item.cta}
+                  <ArrowUpRight class="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 sm:hidden" />
+                </div>
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</section>

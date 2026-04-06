@@ -1,0 +1,30 @@
+---
+import HatchCatalogueGrid from "@/components/sections/hatch-catalogue-grid.astro";
+import HatchCta from "@/components/sections/hatch-cta";
+import { SITE_DESCRIPTION } from "@/consts";
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import { getAllFormations } from "@/lib/get-formations";
+
+const formations = getAllFormations().map((entry) => ({
+  slug: entry.slug,
+  title: entry.title,
+  subtitle: entry.subtitle,
+  description: entry.description,
+  duration: entry.duration,
+  format: entry.format,
+  price: entry.price,
+}));
+---
+
+<DefaultLayout title="Catalogue des formations" description={SITE_DESCRIPTION}>
+  <HatchCatalogueGrid
+    title="Catalogue des formations"
+    subtitle="Des parcours clairs, opérationnels et adaptés aux besoins des professionnels de la restauration."
+    items={formations}
+  />
+  <HatchCta
+    title={"Besoin d’un format adapté\nà votre établissement ?"}
+    ctaLabel="Demander une proposition"
+    ctaHref="/contact"
+  />
+</DefaultLayout>

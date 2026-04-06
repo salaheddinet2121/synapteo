@@ -1,0 +1,39 @@
+---
+import HatchContact from "@/components/sections/hatch-contact";
+import HatchCta from "@/components/sections/hatch-cta";
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+
+const reclamationTypes = [
+  { label: "Réclamation sur une formation", value: "formation" },
+  { label: "Réclamation administrative", value: "administratif" },
+  { label: "Demande de médiation", value: "mediation" },
+  { label: "Accessibilité ou adaptation", value: "accessibilite" },
+  { label: "Autre demande", value: "autre" },
+];
+---
+
+<DefaultLayout
+  title="Réclamation et médiation"
+  description="Déposez votre réclamation ou votre demande de médiation via un formulaire dédié."
+>
+  <HatchContact
+    eyebrow="QUALITÉ"
+    title="Réclamation et médiation"
+    description="Utilisez ce formulaire pour nous transmettre une réclamation, une demande de médiation ou un signalement lié à l’accessibilité. Votre demande est enregistrée puis traitée dans les meilleurs délais."
+    formTitle="Déposer une demande"
+    submitLabel="Préparer l'e-mail"
+    subjectPrefix="Réclamation Saniform"
+    requestTypeLabel="Type de demande"
+    requestTypePlaceholder="Choisir un type de demande"
+    requestTypeOptions={reclamationTypes}
+    detailsLabel="Détails de votre demande"
+    detailsPlaceholder="Précisez la formation concernée, la date, le contexte et les éléments utiles à l'analyse de votre demande."
+    client:load
+  />
+  <HatchCta
+    title="Besoin d'un échange rapide\navant d'envoyer votre dossier ?"
+    description="Nous pouvons vous orienter vers la bonne démarche avant le dépôt formel de votre demande."
+    ctaHref="/contact"
+    ctaLabel="Contacter Saniform"
+  />
+</DefaultLayout>

@@ -1,0 +1,30 @@
+---
+import { getCollection, render } from "astro:content";
+
+import LegalArticle from "@/components/sections/legal-article";
+import { SITE_DESCRIPTION } from "@/consts";
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("informationsPratiques");
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<DefaultLayout title={entry.data.title} description={entry.data.description ?? SITE_DESCRIPTION}>
+  <LegalArticle
+    overline={entry.data.category}
+    title={entry.data.title}
+    subtitle={entry.data.description}
+    updatedAt={entry.data.updatedAt}
+    client:load
+  >
+    <Content />
+  </LegalArticle>
+</DefaultLayout>

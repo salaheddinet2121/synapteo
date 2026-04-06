@@ -1,0 +1,159 @@
+---
+import ArrowUpRight from "phosphor-astro/ArrowUpRight.astro";
+import Clock from "phosphor-astro/Clock.astro";
+import GraduationCap from "phosphor-astro/GraduationCap.astro";
+
+import { badgeVariants } from "@/components/ui/badge";
+
+type FormationCardItem = {
+  slug: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  duration?: string;
+  format?: string;
+  price?: string;
+};
+
+type Props = {
+  title?: string;
+  subtitle?: string;
+  items: FormationCardItem[];
+  limit?: number;
+  showHeader?: boolean;
+  className?: string;
+};
+
+const {
+  title = "Catalogue de formations",
+  subtitle = "Des formations conçues pour répondre aux réalités opérationnelles de la restauration.",
+  items,
+  limit,
+  showHeader = true,
+  className,
+} = Astro.props;
+
+const visibleItems = typeof limit === "number" ? items.slice(0, limit) : items;
+
+const visuals = [
+  "bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.3),transparent_32%),linear-gradient(135deg,#f3f0ff_0%,#e5dcff_45%,#f8f6ff_100%)]",
+  "bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.34),transparent_28%),linear-gradient(135deg,#eef4ff_0%,#dbe8ff_45%,#f8fbff_100%)]",
+  "bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.28),transparent_32%),linear-gradient(135deg,#fff2e8_0%,#ffe2c7_45%,#fffaf5_100%)]",
+  "bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.3),transparent_30%),linear-gradient(135deg,#eefcf5_0%,#d9f7e8_45%,#f8fdfb_100%)]",
+];
+---
+
+<section class:list={["bg-background", className]}>
+  <div class="container py-16 sm:py-20">
+    {
+      showHeader ? (
+        <div class="max-w-3xl">
+          <h2 class="font-display text-3xl leading-[1.05] sm:text-4xl">
+            {title}
+          </h2>
+          <p class="text-muted-foreground mt-4 text-base leading-7 sm:text-lg">
+            {subtitle}
+          </p>
+        </div>
+      ) : null
+    }
+
+    {
+      visibleItems.length > 0 ? (
+        <div
+          class:list={[
+            "grid gap-5 sm:grid-cols-2 xl:grid-cols-2",
+            showHeader ? "mt-10" : "",
+          ]}
+        >
+          {visibleItems.map((item, index) => (
+            <a
+              href={`/catalogue/${item.slug}`}
+              class="group overflow-hidden rounded-[24px] border border-border/70 bg-white transition-transform duration-200 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,23,42,0.07)]"
+            >
+              <div
+                class:list={[
+                  "relative h-40 overflow-hidden border-b border-border/70 p-5",
+                  visuals[index % visuals.length],
+                ]}
+              >
+                <div
+                  class={badgeVariants({
+                    variant: "secondary",
+                    className:
+                      "h-7 rounded-full px-3 text-[0.78rem] shadow-sm backdrop-blur",
+                  })}
+                >
+                  {item.format?.includes("distanciel")
+                    ? "Distanciel"
+                    : (item.format ?? "Formation")}
+                </div>
+
+                <div class="absolute right-5 top-5">
+                  <ArrowUpRight class="size-4.5 text-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </div>
+
+                <div class="absolute inset-x-5 bottom-5">
+                  <div class="text-primary/85 text-[0.7rem] font-medium uppercase tracking-[0.16em]">
+                    {item.subtitle ?? "Formation"}
+                  </div>
+                  <div class="text-foreground mt-2 max-w-[14rem] text-3xl leading-none font-semibold">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-5 sm:p-6">
+                <div class="text-primary/85 text-[0.72rem] font-medium uppercase tracking-[0.16em]">
+                  {item.subtitle ?? "Catalogue"}
+                </div>
+
+                <h3 class="text-foreground mt-2.5 text-[1.45rem] leading-[1.22] font-semibold">
+                  {item.title}
+                </h3>
+
+                <p class="text-muted-foreground mt-3 text-[0.98rem] leading-7">
+                  {item.description}
+                </p>
+
+                <div class="text-muted-foreground mt-4 flex flex-wrap items-center gap-4 text-[0.95rem]">
+                  <span class="inline-flex items-center gap-2">
+                    <Clock class="size-4" />
+                    {item.duration ?? "Durée sur demande"}
+                  </span>
+                  <span class="inline-flex items-center gap-2">
+                    <GraduationCap class="size-4" />
+                    {item.format ?? "Formation"}
+                  </span>
+                </div>
+
+                <div class="mt-5 border-t border-border/70 pt-4">
+                  <p class="text-foreground/75 text-[0.72rem] font-medium uppercase tracking-[0.14em]">
+                    À partir de
+                  </p>
+                  <p class="text-foreground mt-1.5 text-[1.35rem] font-semibold">
+                    {item.price ?? "Sur devis"}
+                  </p>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div
+          class:list={[
+            "rounded-[28px] border border-dashed border-border/70 bg-card/20 p-8",
+            showHeader ? "mt-10" : "",
+          ]}
+        >
+          <p class="text-foreground text-lg font-medium">
+            Aucune formation à afficher
+          </p>
+          <p class="text-muted-foreground mt-2 text-base">
+            Les formations du catalogue n’ont pas été chargées correctement.
+          </p>
+        </div>
+      )
+    }
+  </div>
+</section>

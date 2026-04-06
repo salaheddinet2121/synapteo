@@ -1,0 +1,80 @@
+---
+import HatchContact from "@/components/sections/hatch-contact";
+import HatchCta from "@/components/sections/hatch-cta";
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+
+const accessibilityRequestTypes = [
+  { label: "Demande d'adaptation pédagogique", value: "adaptation-pedagogique" },
+  { label: "Demande d'aménagement logistique", value: "amenagement-logistique" },
+  { label: "Besoin d'accompagnement individuel", value: "accompagnement-individuel" },
+  { label: "Question sur l'accessibilité du lieu", value: "accessibilite-lieu" },
+  { label: "Autre besoin", value: "autre" },
+];
+---
+
+<DefaultLayout
+  title="Accessibilité handicap"
+  description="Faites-nous part de vos besoins d'adaptation ou d'accompagnement avant une formation."
+>
+  <section class="bg-background">
+    <div class="container py-16 sm:py-20">
+      <div class="bg-features-hero rounded-[28px] px-6 py-12 text-center sm:px-8 sm:py-16">
+        <p class="text-tagline text-sm sm:text-base">INCLUSION</p>
+        <h1 class="text-foreground mt-4 text-3xl leading-tight font-medium tracking-tight sm:text-5xl">
+          Accessibilité handicap
+        </h1>
+        <p class="text-muted-foreground mx-auto mt-3 max-w-3xl text-base sm:text-lg">
+          Saniform étudie les besoins d’adaptation en amont afin de proposer, lorsque
+          cela est possible, des modalités d’accueil, de rythme ou de support
+          compatibles avec la situation du participant.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-4 md:grid-cols-3">
+        <div class="rounded-[22px] border border-border/70 bg-white p-6">
+          <h2 class="text-foreground text-xl font-semibold">Analyse personnalisée</h2>
+          <p class="text-muted-foreground mt-3 text-base leading-7">
+            Chaque demande est étudiée individuellement avec la personne concernée et,
+            si besoin, avec le commanditaire.
+          </p>
+        </div>
+        <div class="rounded-[22px] border border-border/70 bg-white p-6">
+          <h2 class="text-foreground text-xl font-semibold">Aménagements possibles</h2>
+          <p class="text-muted-foreground mt-3 text-base leading-7">
+            Supports, rythme, organisation ou modalités d’accueil peuvent être ajustés
+            lorsque la situation le permet.
+          </p>
+        </div>
+        <div class="rounded-[22px] border border-border/70 bg-white p-6">
+          <h2 class="text-foreground text-xl font-semibold">Orientation complémentaire</h2>
+          <p class="text-muted-foreground mt-3 text-base leading-7">
+            Si nécessaire, Saniform peut orienter vers des interlocuteurs ou partenaires
+            complémentaires pour sécuriser le parcours.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <HatchContact
+    eyebrow="DEMANDE D'ADAPTATION"
+    title="Préparer votre accueil dans les meilleures conditions"
+    description="Utilisez ce formulaire pour nous signaler un besoin d’aménagement, poser une question sur l’accessibilité ou demander un accompagnement spécifique avant la formation."
+    formTitle="Envoyer une demande d'accessibilité"
+    submitLabel="Préparer l'e-mail"
+    subjectPrefix="Accessibilité Saniform"
+    requestTypeLabel="Type de besoin"
+    requestTypePlaceholder="Choisir un type de besoin"
+    requestTypeOptions={accessibilityRequestTypes}
+    detailsLabel="Décrivez votre situation"
+    detailsPlaceholder="Indiquez la formation concernée, la date souhaitée, les adaptations utiles et toute information qui nous aidera à préparer un accueil adapté."
+    client:load
+  />
+
+  <HatchCta
+    title="Vous préférez un premier échange\navant d'envoyer votre demande ?"
+    description="Nous pouvons faire un point rapide pour identifier la solution la plus adaptée à votre situation."
+    ctaHref="/contact"
+    ctaLabel="Parler avec Saniform"
+  />
+</DefaultLayout>

@@ -1,0 +1,38 @@
+---
+import HatchCatalogueGrid from "@/components/sections/hatch-catalogue-grid.astro";
+import HatchCta from "@/components/sections/hatch-cta";
+import HatchFaq from "@/components/sections/hatch-faq";
+import HatchHero from "@/components/sections/hatch-hero";
+import HatchHowItWorks from "@/components/sections/hatch-how-it-works";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import { getAllFormations } from "@/lib/get-formations";
+
+const formations = getAllFormations().map((entry) => ({
+  slug: entry.slug,
+  title: entry.title,
+  subtitle: entry.subtitle,
+  description: entry.description,
+  duration: entry.duration,
+  format: entry.format,
+  price: entry.price,
+}));
+---
+
+<DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <HatchHero client:load />
+  <HatchHowItWorks client:load />
+  <HatchCatalogueGrid
+    title="Catalogue Saniform"
+    subtitle="Une sélection de formations utiles, lisibles et directement applicables par vos équipes."
+    items={formations}
+    limit={3}
+  />
+  <HatchFaq client:load />
+
+  <HatchCta
+    title={"Faites progresser vos équipes\navec une formation vraiment utile."}
+    ctaLabel="Parler de votre besoin"
+    ctaHref="/contact"
+  />
+</DefaultLayout>
