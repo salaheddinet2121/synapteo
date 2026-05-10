@@ -91,7 +91,7 @@ export function Footer({
           <div className="space-y-6">
             <a href="/" className="inline-flex items-center gap-4" aria-label="Accueil Synapteo">
               <img
-                src="/images/layout/logo.svg"
+                src="/images/layout/full-logo.svg"
                 alt={name}
                 width={52}
                 height={36}
@@ -99,7 +99,7 @@ export function Footer({
                 loading="eager"
                 decoding="async"
               />
-              <span className="text-lg font-semibold text-foreground">{name}</span>
+
             </a>
 
             <p className="text-muted-foreground max-w-md text-sm leading-6">
