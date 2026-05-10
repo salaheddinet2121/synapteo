@@ -79,8 +79,8 @@ export default function HatchContact({
   phoneLabel = '06 14 51 11 92',
   phoneHref = 'tel:+33614511192',
 
-  emailLabel = 'lirecteurdem@gmail.com',
-  emailHref = 'mailto:lirecteurdem@gmail.com',
+  emailLabel = 'bonjour@synapteo.fr',
+  emailHref = 'mailto:bonjour@synapteo.fr',
 
   address = '438 avenue de Montpellier\n34970 Lattes',
   addressHref,

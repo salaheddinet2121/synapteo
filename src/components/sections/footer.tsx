@@ -27,8 +27,8 @@ const CONTACT_LINKS = [
     Icon: Phone,
   },
   {
-    label: 'lirecteurdem@gmail.com',
-    href: 'mailto:lirecteurdem@gmail.com',
+    label: 'bonjour@synapteo.fr',
+    href: 'mailto:bonjour@synapteo.fr',
     Icon: Mail,
   },
   {
