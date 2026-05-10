@@ -35,7 +35,7 @@ export default function HatchHero({
   subtitle = (
     <>
       Synapteo est un centre de formation en langues étrangères certifié Qualiopi. Cours
-      d'anglais, d'espagnol, d'allemand, de FLE et plus — en présentiel, à distance ou
+      d'anglais, d'espagnol et de FLE — en présentiel, à distance ou
       en entreprise, éligibles CPF et OPCO.
     </>
   ),

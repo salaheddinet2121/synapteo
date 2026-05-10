@@ -42,19 +42,6 @@ const SERVICES: Service[] = [
     ],
   },
   {
-    slug: 'allemand-professionnel',
-    title: 'Allemand professionnel',
-    iconSrc: '/images/services/noun-semicircles-8294628.svg',
-    description:
-      "Acquérir ou consolider les bases de l'allemand pour communiquer dans un contexte professionnel européen.",
-    features: [
-      'Bases grammaticales',
-      'Échanges professionnels',
-      'Compréhension orale',
-      'Progression adaptée',
-    ],
-  },
-  {
     slug: 'francais-langue-etrangere',
     title: 'Français langue étrangère',
     iconSrc: '/images/services/noun-star-7745963.svg',

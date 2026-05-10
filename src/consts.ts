@@ -1,6 +1,6 @@
 export const SITE_TITLE = "Synapteo";
 export const SITE_DESCRIPTION =
-  "Synapteo, centre de formation en langues étrangères en France. Anglais, espagnol, allemand, FLE et plus — cours individuels, groupes et formations professionnelles éligibles CPF et OPCO.";
+  "Synapteo, centre de formation en langues étrangères en France. Anglais, espagnol, français langue étrangère — cours individuels, groupes et formations professionnelles éligibles CPF et OPCO.";
 
 export const SITE_METADATA = {
   title: {
@@ -14,7 +14,7 @@ export const SITE_METADATA = {
     "formation linguistique",
     "cours d'anglais",
     "cours d'espagnol",
-    "cours d'allemand",
+
     "FLE",
     "français langue étrangère",
     "formation professionnelle langues",

@@ -26,7 +26,7 @@ const FAQS = [
   {
     question: 'Quelles langues enseignez-vous ?',
     answer:
-      "Nous proposons des cours d'anglais, d'espagnol, d'allemand, de français langue étrangère (FLE) et d'autres langues sur demande. Contactez-nous pour vérifier la disponibilité pour votre langue cible.",
+      "Nous proposons des cours d'anglais, d'espagnol et de français langue étrangère (FLE). Contactez-nous pour toute autre demande.",
   },
   {
     question: 'Comment demander un devis ?',

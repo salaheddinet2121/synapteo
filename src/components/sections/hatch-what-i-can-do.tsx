@@ -57,14 +57,6 @@ const DEFAULT_SERVICES: Service[] = [
     slug: 'espagnol-professionnel',
   },
   {
-    title: 'Allemand',
-    category: 'Europe',
-    description:
-      'Acquérir les bases ou se perfectionner en allemand pour les relations commerciales et institutionnelles.',
-    iconSrc: '/images/services/noun-semicircles-8294628.svg',
-    slug: 'allemand-professionnel',
-  },
-  {
     title: 'Français langue étrangère',
     category: 'FLE',
     description:

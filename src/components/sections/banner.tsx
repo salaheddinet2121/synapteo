@@ -36,7 +36,7 @@ const Banner = ({ url = 'https://shadcnblocks.com' }: { url?: string }) => {
       <div className="container flex items-center justify-between gap-4 py-3 pr-12">
         <div className="flex flex-1 items-center justify-center gap-3 sm:gap-4">
           <span className="text-primary-foreground text-center text-sm font-medium">
-            Formations en langues étrangères éligibles CPF — anglais, espagnol, allemand et plus.
+            Formations en langues étrangères éligibles CPF — anglais, espagnol et français langue étrangère.
           </span>
           <Button size="sm" variant="secondary" asChild>
             <a href={url}>

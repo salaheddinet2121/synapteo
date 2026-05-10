@@ -104,7 +104,7 @@ export function Footer({
 
             <p className="text-muted-foreground max-w-md text-sm leading-6">
               Centre de formation en langues étrangères certifié Qualiopi. Cours d'anglais,
-              espagnol, allemand et FLE pour les particuliers et les entreprises, éligibles
+              d'espagnol et de FLE pour les particuliers et les entreprises, éligibles
               CPF et OPCO.
             </p>
 
