@@ -1,29 +1,31 @@
-export const SITE_TITLE = "Saniform";
+export const SITE_TITLE = "Synapteo";
 export const SITE_DESCRIPTION =
-  "Saniform.fr, centre de formation spécialisé en hygiène des restaurants, HACCP, sécurité alimentaire, protocoles sanitaires et accompagnement opérationnel des équipes.";
+  "Synapteo, centre de formation en langues étrangères en France. Anglais, espagnol, allemand, FLE et plus — cours individuels, groupes et formations professionnelles éligibles CPF et OPCO.";
 
 export const SITE_METADATA = {
   title: {
     default: SITE_TITLE,
-    template: "%s | Saniform",
+    template: "%s | Synapteo",
   },
   description: SITE_DESCRIPTION,
   keywords: [
-    "Saniform",
-    "saniform.fr",
-    "centre de formation",
-    "hygiène restaurant",
-    "HACCP",
-    "sécurité alimentaire",
-    "PMS",
-    "QHSE",
-    "formation restauration",
-    "prévention des risques",
-    "hygiène alimentaire",
+    "Synapteo",
+    "centre de formation langues",
+    "formation linguistique",
+    "cours d'anglais",
+    "cours d'espagnol",
+    "cours d'allemand",
+    "FLE",
+    "français langue étrangère",
+    "formation professionnelle langues",
+    "CPF langues",
+    "OPCO formation",
+    "cours de langues en ligne",
+    "formation langues entreprise",
   ],
-  authors: [{ name: "Saniform" }],
-  creator: "Saniform",
-  publisher: "Saniform",
+  authors: [{ name: "Synapteo" }],
+  creator: "Synapteo",
+  publisher: "Synapteo",
   robots: {
     index: true,
     follow: true,
@@ -42,7 +44,7 @@ export const SITE_METADATA = {
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    siteName: "Saniform",
+    siteName: "Synapteo",
     images: [
       {
         url: "/og-image.png",
@@ -57,6 +59,6 @@ export const SITE_METADATA = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     images: ["/og-image.png"],
-    creator: "@saniform",
+    creator: "@synapteo",
   },
 };

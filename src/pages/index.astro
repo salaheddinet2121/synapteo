@@ -13,6 +13,7 @@ const formations = getAllFormations().map((entry) => ({
   title: entry.title,
   subtitle: entry.subtitle,
   description: entry.description,
+  image: entry.image,
   duration: entry.duration,
   format: entry.format,
   price: entry.price,
@@ -23,15 +24,15 @@ const formations = getAllFormations().map((entry) => ({
   <HatchHero client:load />
   <HatchHowItWorks client:load />
   <HatchCatalogueGrid
-    title="Catalogue Saniform"
-    subtitle="Une sélection de formations utiles, lisibles et directement applicables par vos équipes."
+    title="Nos formations en langues"
+    subtitle="Une sélection de parcours linguistiques adaptés à tous les niveaux et tous les objectifs."
     items={formations}
     limit={3}
   />
   <HatchFaq client:load />
 
   <HatchCta
-    title={"Faites progresser vos équipes\navec une formation vraiment utile."}
+    title={"Progressez en langue,\navec un accompagnement vraiment personnalise."}
     ctaLabel="Parler de votre besoin"
     ctaHref="/contact"
   />

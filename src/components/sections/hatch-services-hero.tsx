@@ -16,55 +16,55 @@ type Service = {
 
 const SERVICES: Service[] = [
   {
-    slug: 'web-design-ux',
-    title: 'Formation HACCP',
+    slug: 'anglais-professionnel',
+    title: 'Anglais professionnel',
     iconSrc: '/images/services/noun-half-circles-7745954.svg',
     description:
-      "Une formation claire et opérationnelle pour maîtriser les principes HACCP, sécuriser les pratiques et répondre aux exigences du secteur.",
+      "Renforcer sa communication en anglais pour les réunions, les emails, les présentations et les échanges internationaux.",
     features: [
-      'Principes HACCP',
-      'Points de contrôle',
-      'Bonnes pratiques d’hygiène',
-      'Application terrain',
+      'Anglais des affaires',
+      'Communication orale',
+      'Rédaction professionnelle',
+      'Mises en situation',
     ],
   },
   {
-    slug: 'brand-design',
-    title: 'Hygiène et sécurité',
+    slug: 'espagnol-professionnel',
+    title: 'Espagnol professionnel',
     iconSrc: '/images/services/noun-sparkle-7746005.svg',
     description:
-      "Former les équipes aux règles d'hygiène, à la sécurité alimentaire et à la prévention des risques dans un cadre concret et applicable.",
+      "Développer ses compétences en espagnol pour échanger avec des clients, partenaires et équipes hispanophones.",
     features: [
-      'Protocoles sanitaires',
-      'Sécurité alimentaire',
-      'Prévention des risques',
-      'Sensibilisation des équipes',
+      'Conversation professionnelle',
+      'Emails et courriers',
+      'Vocabulaire métier',
+      'Pratique guidée',
     ],
   },
   {
-    slug: 'product-design',
-    title: 'PMS et traçabilité',
+    slug: 'allemand-professionnel',
+    title: 'Allemand professionnel',
     iconSrc: '/images/services/noun-semicircles-8294628.svg',
     description:
-      "Mettre en place des procédures fiables, améliorer la traçabilité et structurer les documents essentiels à une exploitation sécurisée.",
+      "Acquérir ou consolider les bases de l'allemand pour communiquer dans un contexte professionnel européen.",
     features: [
-      'Plan de maîtrise sanitaire',
-      'Suivi documentaire',
-      'Traçabilité',
-      'Conformité',
+      'Bases grammaticales',
+      'Échanges professionnels',
+      'Compréhension orale',
+      'Progression adaptée',
     ],
   },
   {
-    slug: 'framer-development',
-    title: 'Audit et accompagnement',
+    slug: 'francais-langue-etrangere',
+    title: 'Français langue étrangère',
     iconSrc: '/images/services/noun-star-7745963.svg',
     description:
-      "Identifier les écarts, renforcer les pratiques et accompagner durablement les responsables et leurs équipes.",
+      "Accompagner les apprenants non francophones dans l'acquisition du français oral, écrit et professionnel.",
     features: [
-      'Audit terrain',
-      'Plan d’action',
-      'Accompagnement des managers',
-      'Suivi opérationnel',
+      'Expression orale',
+      'Compréhension écrite',
+      'Français professionnel',
+      'Préparation certifications',
     ],
   },
 ];

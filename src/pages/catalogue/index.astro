@@ -10,6 +10,7 @@ const formations = getAllFormations().map((entry) => ({
   title: entry.title,
   subtitle: entry.subtitle,
   description: entry.description,
+  image: entry.image,
   duration: entry.duration,
   format: entry.format,
   price: entry.price,
@@ -18,12 +19,12 @@ const formations = getAllFormations().map((entry) => ({
 
 <DefaultLayout title="Catalogue des formations" description={SITE_DESCRIPTION}>
   <HatchCatalogueGrid
-    title="Catalogue des formations"
-    subtitle="Des parcours clairs, opérationnels et adaptés aux besoins des professionnels de la restauration."
+    title="Nos formations en langues"
+    subtitle="Des parcours linguistiques adaptés à tous les niveaux, tous les publics et tous les objectifs."
     items={formations}
   />
   <HatchCta
-    title={"Besoin d’un format adapté\nà votre établissement ?"}
+    title={"Besoin d’un format sur mesure\npour votre equipe ou votre projet ?"}
     ctaLabel="Demander une proposition"
     ctaHref="/contact"
   />

@@ -9,24 +9,29 @@ import {
 
 const FAQS = [
   {
-    question: 'Les formations Saniform sont-elles adaptées à la restauration ?',
+    question: 'Les formations Synapteo sont-elles éligibles au CPF ?',
     answer:
-      'Oui. Les contenus sont pensés pour les restaurants, hôtels, cuisines collectives et métiers de bouche, avec des exemples directement issus du terrain.',
+      "Oui. Synapteo est certifié Qualiopi, ce qui permet la prise en charge de nos formations via le Compte Personnel de Formation (CPF), les OPCO et d'autres dispositifs publics de financement.",
   },
   {
-    question: 'Peut-on organiser une formation dans notre établissement ?',
+    question: 'Comment se déroule le premier cours ?',
     answer:
-      'Oui. Saniform propose des formats intra-entreprise afin d’adapter la pédagogie à votre organisation, vos équipes et vos contraintes horaires.',
+      "Avant le début de la formation, nous réalisons un test de positionnement afin d'évaluer votre niveau et de définir avec vous un programme adapté à vos objectifs et à votre rythme.",
   },
   {
-    question: 'Proposez-vous un accompagnement sur le PMS et la traçabilité ?',
+    question: 'Proposez-vous des cours en ligne ?',
     answer:
-      'Oui. Saniform intervient aussi sur la structuration du plan de maîtrise sanitaire, la mise en ordre documentaire et les bonnes pratiques de suivi.',
+      'Oui. Toutes nos formations sont disponibles en visioconférence, en présentiel ou en mode hybride. Vous choisissez le format qui correspond le mieux à votre situation.',
+  },
+  {
+    question: 'Quelles langues enseignez-vous ?',
+    answer:
+      "Nous proposons des cours d'anglais, d'espagnol, d'allemand, de français langue étrangère (FLE) et d'autres langues sur demande. Contactez-nous pour vérifier la disponibilité pour votre langue cible.",
   },
   {
     question: 'Comment demander un devis ?',
     answer:
-      'Il suffit de nous contacter avec votre besoin, le type d’établissement, le nombre de participants et le format souhaité. Nous revenons vers vous avec une proposition adaptée.',
+      'Il vous suffit de nous contacter via le formulaire ou par téléphone en précisant la langue souhaitée, votre niveau actuel, vos objectifs et le nombre de participants. Nous vous adressons une proposition sous 48 h.',
   },
 ];
 

@@ -15,29 +15,29 @@ type HatchAboutMeProps = {
 };
 
 const MACROS = [
-  { value: '30', unit: 'ans', label: "d'expérience en restauration" },
-  { value: '20+', unit: 'ans', label: 'sur des postes de direction' },
-  { value: '3', unit: 'régions', label: 'pilotées simultanément' },
-  { value: '100+', unit: 'équipiers', label: 'formés et accompagnés' },
+  { value: '10+', unit: 'ans', label: "d'expertise en formation linguistique" },
+  { value: '8', unit: 'langues', label: 'enseignées par nos formateurs' },
+  { value: '500+', unit: 'apprenants', label: 'formés chaque année' },
+  { value: '95 %', unit: '', label: 'de satisfaction apprenant' },
 ];
 
 export default function HatchAboutMe({
-  eyebrow = 'PROFIL',
-  title = 'Thierry Vandenabeele',
+  eyebrow = 'QUI SOMMES-NOUS',
+  title = 'Synapteo',
   paragraphs = [
-    `Professionnel de terrain avec près de 30 ans d'expérience dans la restauration, dont plus de 20 ans sur des fonctions de direction, j'accompagne la performance de sites, d'équipes et de centres de profit avec une approche à la fois opérationnelle, humaine et structurée.`,
-    `Mon parcours couvre la direction régionale, la gestion multisites, le pilotage de comptes d'exploitation, l'hygiène et la sécurité, la prévention des risques, ainsi que la formation et le développement des collaborateurs.`,
+    `Synapteo est un centre de formation en langues étrangères certifié Qualiopi, créé pour accompagner aussi bien les particuliers que les professionnels dans leur apprentissage linguistique. Notre équipe de formateurs certifiés intervient en français et à l'international, en présentiel comme à distance.`,
+    `Notre approche repose sur la pédagogie active, l'adaptation permanente au niveau et aux objectifs de chaque apprenant, et une progression mesurée et transparente. Nous croyons qu'apprendre une langue, c'est s'ouvrir à de nouvelles opportunités professionnelles et culturelles.`,
   ],
   expertise = [
-    'Direction régionale et opérationnelle',
-    'Gestion de restaurants et centres de profit',
-    'Performance, approvisionnement et organisation logistique',
-    'Management, formation et développement des équipes',
-    'Hygiène, sécurité, HACCP, PMS et CSSCT',
-    'Résolution de conflits et accompagnement du changement',
+    'Anglais professionnel et général',
+    'Espagnol des affaires et courant',
+    'Allemand pour les entreprises',
+    'Français langue étrangère (FLE)',
+    'Préparation aux certifications (TOEIC, DELF, DALF…)',
+    'Formation en ligne, présentiel et mode hybride',
   ],
   imageSrc = '/images/about/portrait.webp',
-  imageAlt = 'Portrait de Thierry Vandenabeele',
+  imageAlt = 'Formatrice Synapteo',
 }: HatchAboutMeProps) {
   return (
     <section className="bg-background">
@@ -56,8 +56,8 @@ export default function HatchAboutMe({
               {title}
             </h1>
             <p className="text-muted-foreground mt-2 text-base font-medium sm:text-lg">
-              Directeur régional et opérationnel —{' '}
-              <span className="text-foreground">expert en restauration multisites</span>
+              Centre de formation en langues étrangères —{' '}
+              <span className="text-foreground">certifié Qualiopi, éligible CPF</span>
             </p>
 
             <div className="border-border mt-8 border-t" />
@@ -92,11 +92,11 @@ export default function HatchAboutMe({
                   </svg>
                 </div>
                 <div>
-                  <div className="text-foreground text-sm font-semibold">Cap 2026</div>
+                  <div className="text-foreground text-sm font-semibold">Notre engagement</div>
                   <p className="text-muted-foreground mt-1 text-sm leading-[1.7]">
-                    Prendre un poste de directeur opérationnel au sein d'une structure ambitieuse,
-                    avec un impact direct sur la performance, la qualité d'exécution et la montée en
-                    compétences des équipes.
+                    Offrir à chaque apprenant une expérience de formation de qualité, avec un suivi
+                    individualisé, des formateurs certifiés et des résultats mesurables à chaque
+                    étape du parcours.
                   </p>
                 </div>
               </div>
@@ -151,7 +151,7 @@ export default function HatchAboutMe({
         {/* ── Expertise tags ── */}
         <div className="mt-12">
           <div className="text-foreground text-xs font-semibold tracking-[0.2em] uppercase">
-            Domaines d'expertise
+            Langues et compétences proposées
           </div>
           <div className="mt-4 flex flex-wrap gap-2.5">
             {expertise.map((item) => (

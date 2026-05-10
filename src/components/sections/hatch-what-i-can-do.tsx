@@ -32,45 +32,45 @@ type HatchWhatICanDoProps = {
 };
 
 const DEFAULT_BULLETS: string[] = [
-  'Formations adaptées aux obligations du terrain.',
-  'Accompagnement opérationnel et pédagogique.',
-  'Sensibilisation claire des équipes et managers.',
-  'Mise en conformité et bonnes pratiques durables.',
-  'Approche concrète, orientée résultats et sécurité.',
+  'Cours individuels, en groupe ou en entreprise.',
+  'Formations éligibles CPF, OPCO et financement public.',
+  'Niveaux A1 à C2, tous publics et tous secteurs.',
+  'Apprentissage en présentiel, à distance ou hybride.',
+  'Pédagogie active, progressive et orientée résultats.',
 ];
 
 const DEFAULT_SERVICES: Service[] = [
   {
-    title: 'Formation HACCP',
-    category: 'Hygiène alimentaire',
+    title: 'Anglais professionnel',
+    category: 'Langue des affaires',
     description:
-      'Maîtriser les fondamentaux HACCP, les contrôles essentiels et les obligations en restauration.',
+      "Maîtriser l'anglais écrit et oral pour évoluer dans un environnement professionnel international.",
     iconSrc: '/images/services/noun-sparkle-7746005.svg',
-    slug: 'brand-design',
+    slug: 'anglais-professionnel',
   },
   {
-    title: 'Hygiène et sécurité',
-    category: 'Prévention',
+    title: 'Espagnol',
+    category: 'Communication',
     description:
-      'Former les équipes aux protocoles sanitaires, aux risques professionnels et aux bons réflexes métier.',
+      'Développer ses compétences en espagnol pour les échanges professionnels et les marchés hispanophones.',
     iconSrc: '/images/services/noun-half-circles-7745954.svg',
-    slug: 'web-design-ux',
+    slug: 'espagnol-professionnel',
   },
   {
-    title: 'PMS et traçabilité',
-    category: 'Méthodes',
+    title: 'Allemand',
+    category: 'Europe',
     description:
-      'Structurer les procédures, le suivi documentaire et la traçabilité pour sécuriser l’exploitation.',
+      'Acquérir les bases ou se perfectionner en allemand pour les relations commerciales et institutionnelles.',
     iconSrc: '/images/services/noun-semicircles-8294628.svg',
-    slug: 'product-design',
+    slug: 'allemand-professionnel',
   },
   {
-    title: 'Audit et accompagnement',
-    category: 'Conseil',
+    title: 'Français langue étrangère',
+    category: 'FLE',
     description:
-      'Évaluer les pratiques en place, corriger les écarts et faire progresser durablement les équipes.',
+      "Accompagner les apprenants non francophones dans l'acquisition du français oral, écrit et professionnel.",
     iconSrc: '/images/services/noun-star-7745963.svg',
-    slug: 'framer-development',
+    slug: 'francais-langue-etrangere',
   },
 ];
 
@@ -82,8 +82,8 @@ const rowMotion = {
 };
 
 export default function HatchWhatICanDo({
-  title = 'Nos formations',
-  description = "Des parcours utiles, concrets et conformes aux réalités du secteur de la restauration.",
+  title = 'Nos formations en langues',
+  description = "Des parcours linguistiques adaptés à vos objectifs, votre niveau et votre rythme de vie.",
   hideHeader = false,
   bullets = DEFAULT_BULLETS,
   ctaLabel = 'Demander des informations',

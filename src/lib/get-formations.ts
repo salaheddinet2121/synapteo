@@ -6,6 +6,7 @@ export type FormationFrontmatter = {
   title: string;
   subtitle?: string;
   description: string;
+  image?: string;
   duration: string;
   format: string;
   audience: string;
@@ -40,6 +41,12 @@ export type FormationDetail = FormationListItem & {
 
 const FORMATIONS_DIR = path.join(process.cwd(), 'src/content/formations');
 
+const FORMATION_IMAGES: Record<string, string> = {
+  'anglais-professionnel': '/images/content/anglais.webp',
+  'espagnol-professionnel': '/images/content/espagnol.webp',
+  'francais-langue-etrangere': '/images/content/francais.webp',
+};
+
 export function getAllFormationSlugs(): string[] {
   try {
     return fs
@@ -55,10 +62,12 @@ export function getAllFormations(): FormationListItem[] {
   return getAllFormationSlugs()
     .map((slug) => {
       const { data } = readFormationFile(slug);
+      const frontmatter = data as FormationFrontmatter;
 
       return {
         slug,
-        ...(data as FormationFrontmatter),
+        ...frontmatter,
+        image: frontmatter.image ?? FORMATION_IMAGES[slug],
       };
     })
     .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
@@ -72,6 +81,7 @@ export function getFormation(slug: string): FormationDetail | null {
     return {
       slug,
       ...frontmatter,
+      image: frontmatter.image ?? FORMATION_IMAGES[slug],
       content,
       objectif: getFirstParagraph(getSection(content, 'Objectif')),
       pointsCles: getBullets(getSection(content, 'Points clés')),

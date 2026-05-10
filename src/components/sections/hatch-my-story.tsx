@@ -22,28 +22,28 @@ type HatchMyStoryProps = {
 
 const DEFAULT_ITEMS: StoryItem[] = [
   {
-    range: '1995 - 2005',
-    title: 'Premières responsabilités\net montée en expertise',
+    range: 'Nos débuts',
+    title: "Une vision claire\nde l'apprentissage",
     description:
-      "Débuts en cuisine, en restauration et en gestion opérationnelle, avec une progression rapide vers des fonctions d'encadrement et de responsabilité.",
+      "Synapteo est né d'une conviction simple : apprendre une langue doit être accessible, efficace et adapté à la réalité de chaque apprenant. Nous avons construit notre méthode autour de cette idée.",
   },
   {
-    range: '2005 - 2017',
-    title: 'Direction opérationnelle,\nqualité et multisites',
+    range: 'Notre développement',
+    title: 'Des formateurs\ncertifiés et engagés',
     description:
-      "Pilotage d'établissements, gestion de centres de profit, qualité, audits, plans d'action, ouvertures et accompagnement des équipes sur le terrain.",
+      "Nous avons recruté des formateurs titulaires de certifications reconnues (CELTA, Master FLE, etc.) et passionnés par la transmission. Chaque formateur suit une formation continue pour rester au meilleur niveau.",
   },
   {
-    range: '2017 - 2025',
-    title: 'Management régional,\nformation et performance',
+    range: "Aujourd'hui",
+    title: 'Un centre certifié\nQualiopi',
     description:
-      "Direction de restaurants multisites, management, hygiène, sécurité, CSSCT, documents d'évaluation des risques et développement des compétences.",
+      "Synapteo est aujourd'hui certifié Qualiopi, ce qui garantit la qualité de nos processus pédagogiques et permet la prise en charge de nos formations via le CPF, les OPCO et les financements publics.",
   },
   {
-    range: '2026',
-    title: 'Nouvel objectif\nà impact',
+    range: 'Demain',
+    title: 'Toujours plus proche\nde nos apprenants',
     description:
-      "Mettre cette expérience au service d'un poste de directeur opérationnel au sein d'une structure ambitieuse et exigeante.",
+      "Nous développons de nouveaux formats hybrides, des outils numériques pédagogiques et des partenariats entreprises pour rendre nos formations encore plus accessibles et impactantes.",
   },
 ];
 
@@ -64,7 +64,7 @@ function StoryCard({ item }: { item: StoryItem }) {
 }
 
 export default function HatchMyStory({
-  heading = 'Parcours',
+  heading = 'Notre histoire',
   items = DEFAULT_ITEMS,
 }: HatchMyStoryProps) {
   const list = Array.isArray(items) ? items : [];

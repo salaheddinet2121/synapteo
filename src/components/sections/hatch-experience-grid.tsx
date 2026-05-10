@@ -19,22 +19,22 @@ type HatchExperienceGridProps = {
 
 const DEFAULT_ITEMS: ExperienceItem[] = [
   {
-    range: '2023 – 2025',
-    title: 'Directeur régional',
+    range: 'Depuis 2015',
+    title: 'Certifié Qualiopi',
     description:
-      "Direction régionale chez Languedoc Restauration, formation en hygiène et sécurité, gestion des risques, management et compte d'exploitation.",
+      "Synapteo est certifié Qualiopi, garantissant la qualité de nos processus de formation. Cette certification permet la prise en charge de nos parcours via le CPF, les OPCO et les financements publics.",
   },
   {
-    range: '2017 – 2023',
-    title: 'Directeur de restaurant multisites',
+    range: 'Depuis 2010',
+    title: 'Formateurs certifiés et expérimentés',
     description:
-      "Pilotage de plusieurs restaurants du groupe Courtepaille, animation des équipes, performance, expérience client, hygiène et audits CSSCT.",
+      "Tous nos formateurs sont titulaires de certifications reconnues en enseignement des langues (CELTA, DELF, Master FLE…) et bénéficient d'une expérience terrain auprès de publics variés.",
   },
   {
-    range: '2005 – 2017',
-    title: 'Direction opérationnelle et qualité',
+    range: 'Partout en France',
+    title: 'Formations en présentiel et à distance',
     description:
-      "Responsabilités en qualité, audit, plan d'action, formation, gestion d'établissements, franchise et ouverture de sites dans différents groupes.",
+      "Nous intervenons dans toute la France — en entreprise, dans nos locaux ou en visioconférence — pour répondre aux besoins des particuliers, des salariés et des équipes.",
   },
 ];
 
@@ -69,7 +69,7 @@ function ExperienceCard({
 }
 
 export default function HatchExperienceGrid({
-  heading = 'Expérience',
+  heading = 'Nos atouts',
   items = DEFAULT_ITEMS,
 }: HatchExperienceGridProps) {
   return (

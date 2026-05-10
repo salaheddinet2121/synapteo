@@ -10,6 +10,7 @@ type FormationCardItem = {
   title: string;
   subtitle?: string;
   description: string;
+  image?: string;
   duration?: string;
   format?: string;
   price?: string;
@@ -25,8 +26,8 @@ type Props = {
 };
 
 const {
-  title = "Catalogue de formations",
-  subtitle = "Des formations conçues pour répondre aux réalités opérationnelles de la restauration.",
+  title = "Catalogue de formations en langues",
+  subtitle = "Des parcours linguistiques conçus pour progresser rapidement et atteindre vos objectifs professionnels.",
   items,
   limit,
   showHeader = true,
@@ -74,14 +75,29 @@ const visuals = [
               <div
                 class:list={[
                   "relative h-40 overflow-hidden border-b border-border/70 p-5",
-                  visuals[index % visuals.length],
+                  item.image ? "bg-muted" : visuals[index % visuals.length],
                 ]}
               >
+                {
+                  item.image ? (
+                    <>
+                      <img
+                        src={item.image}
+                        alt=""
+                        class="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.03]"
+                        loading={index < 2 ? "eager" : "lazy"}
+                        decoding="async"
+                      />
+                      <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/0 to-black/35" />
+                    </>
+                  ) : null
+                }
+
                 <div
                   class={badgeVariants({
                     variant: "secondary",
                     className:
-                      "h-7 rounded-full px-3 text-[0.78rem] shadow-sm backdrop-blur",
+                      "relative z-10 h-7 rounded-full px-3 text-[0.78rem] shadow-sm backdrop-blur",
                   })}
                 >
                   {item.format?.includes("distanciel")
@@ -89,15 +105,15 @@ const visuals = [
                     : (item.format ?? "Formation")}
                 </div>
 
-                <div class="absolute right-5 top-5">
-                  <ArrowUpRight class="size-4.5 text-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                <div class="absolute right-5 top-5 z-10">
+                  <ArrowUpRight class:list={["size-4.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5", item.image ? "text-white" : "text-foreground"]} />
                 </div>
 
-                <div class="absolute inset-x-5 bottom-5">
-                  <div class="text-primary/85 text-[0.7rem] font-medium uppercase tracking-[0.16em]">
+                <div class="absolute inset-x-5 bottom-5 z-10">
+                  <div class:list={["text-[0.7rem] font-medium uppercase tracking-[0.16em]", item.image ? "text-white/85" : "text-primary/85"]}>
                     {item.subtitle ?? "Formation"}
                   </div>
-                  <div class="text-foreground mt-2 max-w-[14rem] text-3xl leading-none font-semibold">
+                  <div class:list={["mt-2 max-w-[14rem] text-3xl leading-none font-semibold", item.image ? "text-white" : "text-foreground"]}>
                     {String(index + 1).padStart(2, "0")}
                   </div>
                 </div>

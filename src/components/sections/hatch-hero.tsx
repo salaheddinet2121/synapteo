@@ -1,6 +1,6 @@
 'use client';
 
-import { BookOpen, Play, ShieldCheck } from 'lucide-react';
+import { Play } from 'lucide-react';
 import * as React from 'react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -28,15 +28,15 @@ export default function HatchHero({
   className,
   title = (
     <>
-      Formations en hygiène alimentaire
-      <br className="hidden sm:block" /> pour les équipes de restauration
+      Apprenez une langue,
+      <br className="hidden sm:block" /> ouvrez de nouvelles portes
     </>
   ),
   subtitle = (
     <>
-      Saniform aide les restaurants, hôtels, cuisines collectives et métiers de bouche à
-      former leurs équipes avec des parcours concrets en HACCP, PMS, hygiène et prévention
-      des risques.
+      Synapteo est un centre de formation en langues étrangères certifié Qualiopi. Cours
+      d'anglais, d'espagnol, d'allemand, de FLE et plus — en présentiel, à distance ou
+      en entreprise, éligibles CPF et OPCO.
     </>
   ),
   primaryCtaHref = '/contact',
@@ -45,20 +45,25 @@ export default function HatchHero({
   const [isVideoOpen, setIsVideoOpen] = React.useState(false);
 
   return (
-    <section className={cn('bg-background py-12 md:py-20 lg:py-20', className)}>
-      <div className="container max-w-6xl">
-        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_26rem] lg:gap-12">
-          <div className="flex flex-col gap-6">
+    <section
+      className={cn(
+        'bg-background py-12 md:py-20 lg:py-20',
+        className,
+      )}
+    >
+      <div className="container max-w-[82rem]">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(34rem,1fr)] lg:gap-10 xl:grid-cols-[minmax(0,42rem)_minmax(38rem,1fr)]">
+          <div className="flex max-w-[43rem] flex-col gap-6">
             <div className="bg-muted text-muted-foreground inline-flex w-fit items-center gap-2 rounded-full px-3 py-1 text-sm">
               <span className="bg-primary inline-flex size-2 rounded-full" />
-              Centre de formation pour l'hygiène en restauration
+              Centre de formation en langues — certifié Qualiopi
             </div>
 
             <div className="space-y-5">
-              <h1 className="font-display text-4xl leading-[1.02] font-medium text-balance sm:text-5xl lg:text-6xl">
+              <h1 className="font-display text-4xl leading-[1.04] font-medium text-balance sm:text-5xl lg:text-[3.35rem] xl:text-[3.65rem]">
                 {title}
               </h1>
-              <p className="font-text text-muted-foreground max-w-2xl text-base leading-7 sm:text-lg">
+              <p className="font-text text-muted-foreground max-w-[40rem] text-base leading-7 sm:text-lg">
                 {subtitle}
               </p>
             </div>
@@ -91,63 +96,34 @@ export default function HatchHero({
                   ))}
                 </div>
                 <p className="text-foreground text-sm leading-snug font-medium">
-                  Des formations pensées pour le terrain, les responsables et les contrôles
-                  sanitaires.
+                  Des apprenants satisfaits partout en France, en présentiel et à distance.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <div className="relative mx-auto mt-20 h-[21.5rem] w-[21.5rem] rounded-full bg-primary/12 sm:h-[24rem] sm:w-[24rem] lg:mx-0 lg:mt-0 lg:h-[26rem] lg:w-[26rem]">
-              <div className="absolute inset-[0.75rem] overflow-hidden rounded-full bg-primary/10">
-                <img
-                  src="/images/about/portrait.webp"
-                  alt="Formatrice Saniform"
-                  className="h-full w-full object-cover object-center"
-                />
-              </div>
-
-              <div className="absolute -right-4 bottom-8 flex w-[18rem] items-center gap-3 rounded-full bg-background px-4 py-3 shadow-lg ring-1 ring-black/5 sm:-right-6">
-                <div className="flex -space-x-3">
-                  {AVATARS.map(({ src, fallback }) => (
-                    <Avatar
-                      key={`${src}-badge`}
-                      className="size-10 border-4 border-background shadow-sm"
-                    >
-                      <AvatarImage src={src} alt="" />
-                      <AvatarFallback>{fallback}</AvatarFallback>
-                    </Avatar>
-                  ))}
-                </div>
-                <div className="text-foreground text-sm font-medium">
-                  Équipes formées partout en France
-                </div>
-              </div>
-
-              <div className="glass-card absolute right-0 top-0 flex h-24 w-24 rotate-12 items-center justify-center rounded-[2rem] sm:h-28 sm:w-28">
-                <BookOpen className="relative z-10 size-10 text-primary sm:size-12" />
-              </div>
-
-              <div className="glass-card absolute -left-8 top-1/3 flex h-24 w-24 -rotate-12 items-center justify-center rounded-[2rem] sm:h-28 sm:w-28">
-                <ShieldCheck className="relative z-10 size-10 text-primary sm:size-12" />
-              </div>
-            </div>
+            <img
+              src="/images/layout/hero_right.webp"
+              alt="Formation linguistique Synapteo"
+              className="hidden h-auto w-full max-w-[36rem] object-contain sm:block lg:max-w-[42rem] xl:max-w-[46rem]"
+              loading="eager"
+              decoding="async"
+            />
           </div>
         </div>
-
       </div>
 
       <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
         <DialogContent className="sm:max-w-3xl">
           <DialogHeader>
-            <DialogTitle>Présentation Saniform</DialogTitle>
+            <DialogTitle>Présentation Synapteo</DialogTitle>
           </DialogHeader>
           <div className="aspect-video overflow-hidden rounded-xl">
             <iframe
               className="h-full w-full"
               src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Présentation Saniform"
+              title="Présentation Synapteo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />

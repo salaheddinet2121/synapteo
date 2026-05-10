@@ -29,21 +29,21 @@ type PricingCard = {
 const CARDS: PricingCard[] = [
   {
     iconSrc: '/icons/pricing/project.svg',
-    iconAlt: 'Icône formation',
+    iconAlt: 'Icône cours individuel',
     badge: 'Le plus demandé',
-    title: 'Formation ponctuelle',
-    lead: "Une intervention ciblée pour répondre à un besoin précis en hygiène, HACCP ou sécurité alimentaire.",
+    title: 'Cours individuel',
+    lead: "Un accompagnement personnalisé avec un formateur dédié, entièrement adapté à votre niveau, vos objectifs et votre emploi du temps.",
     subLead:
-      "Idéale pour une mise à niveau, une ouverture, un audit préparatoire ou une remise en conformité.",
+      "Idéal pour progresser rapidement, préparer un entretien, un départ à l'étranger ou une certification officielle.",
     price: 'Sur devis',
     priceSuffix: '',
     priceMeta: '',
     features: [
-      'Analyse du besoin et cadrage',
-      'Contenu adapté à votre activité',
-      'Supports pédagogiques inclus',
-      'Sensibilisation des équipes',
-      'Recommandations opérationnelles',
+      'Test de positionnement inclus',
+      'Programme 100 % personnalisé',
+      'Formateur certifié et dédié',
+      'Présentiel, visioconférence ou hybride',
+      'Éligible CPF et OPCO',
     ],
     ctaLabel: 'Demander un devis',
     ctaHref: '/contact',
@@ -51,20 +51,20 @@ const CARDS: PricingCard[] = [
   },
   {
     iconSrc: '/icons/pricing/subscription.svg',
-    iconAlt: 'Icône accompagnement',
-    title: 'Accompagnement régulier',
-    lead: 'Un suivi dans la durée pour maintenir les standards, former les équipes et sécuriser les pratiques.',
+    iconAlt: 'Icône formation en groupe',
+    title: 'Formation en groupe',
+    lead: 'Des cours collectifs pour apprendre en interagissant, à un tarif accessible et dans une dynamique de groupe motivante.',
     subLead:
-      'Adapté aux groupes, réseaux, établissements multisites et structures en évolution.',
+      'Adapté aux entreprises, associations, équipes professionnelles et publics en reconversion.',
     price: 'Sur devis',
     priceSuffix: '',
     priceMeta: '',
     features: [
-      'Plan de formation récurrent',
-      'Suivi des procédures et bonnes pratiques',
-      'Appui aux responsables et managers',
-      'Prévention des risques et conformité',
-      'Interventions planifiées selon vos besoins',
+      'Groupes de 4 à 12 participants',
+      'Contenus thématiques ou généraux',
+      'Sessions régulières et structurées',
+      'Supports pédagogiques fournis',
+      'Financement entreprise et OPCO accepté',
     ],
     ctaLabel: 'Nous consulter',
     ctaHref: '/contact',
@@ -189,8 +189,8 @@ export default function HatchPricing({ hideHeader = false }: HatchPricingProps) 
       <div className="section-padding container">
         {hideHeader ? null : (
           <HatchSectionHeader
-            title="Nos formats d'intervention"
-            description="Des prestations ajustées à votre structure, à vos équipes et à vos enjeux terrain."
+            title="Nos formules de formation"
+            description="Des formats adaptés à votre situation, votre budget et vos objectifs linguistiques."
             descriptionClassName="text-end"
           />
         )}

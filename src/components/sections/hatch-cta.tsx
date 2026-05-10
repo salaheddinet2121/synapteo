@@ -26,14 +26,14 @@ const defaultCards: HatchCtaCard[] = [
   {
     title: "À propos",
     description:
-      "Découvrez mon parcours, mon approche terrain et la manière dont j’accompagne les équipes.",
+      "Découvrez qui nous sommes, notre approche pédagogique et notre engagement envers chaque apprenant.",
     href: "/about",
     icon: "zap",
   },
   {
-    title: "Découvrir le catalogue",
+    title: "Nos formations",
     description:
-      "Consultez les formations disponibles et identifiez le format le plus utile pour votre activité.",
+      "Consultez le catalogue complet de nos cours en langues et trouvez le parcours qui vous correspond.",
     href: "/catalogue",
     icon: "book",
   },
@@ -46,13 +46,13 @@ const iconMap = {
 
 export default function HatchCta({
   className,
-  title = "Faites progresser vos équipes\navec une formation utile.",
-  description = "Des formations claires, applicables et adaptées à votre organisation. Vous pourrez remplacer les visuels et les contenus plus tard.",
+  title = "Progressez en langue,\nà votre rythme et selon vos objectifs.",
+  description = "Synapteo vous accompagne avec des formations sur mesure, des formateurs certifiés et des méthodes éprouvées pour des résultats concrets.",
   ctaHref = "/contact",
   ctaLabel = "Parler de votre besoin",
   backgroundLightSrc = "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/full-width-backgrounds/denis96-gmsf4Zo2-rY-unsplash.webp",
   backgroundDarkSrc = "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/full-width-backgrounds/andrew-kliatskyi-LYZxo7oVFOI-unsplash.webp",
-  backgroundAlt = "Illustration d'une session de formation",
+  backgroundAlt = "Illustration d'une session de cours de langue",
   cards = defaultCards,
 }: HatchCtaProps) {
   return (

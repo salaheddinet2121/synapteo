@@ -17,20 +17,20 @@ type Value = {
 
 const VALUES: Value[] = [
   {
-    title: 'User-Centered',
-    body: 'Every pixel serves the user. I start with research and empathy, not assumptions.',
+    title: 'Pédagogie active',
+    body: 'Chaque apprenant est unique. Nous partons de ses besoins réels pour construire un enseignement vivant, engageant et durablement efficace.',
   },
   {
-    title: 'Clear & Simple',
-    body: "I believe in removing friction. If it's hard to understand, it's not finished.",
+    title: 'Accessibilité et flexibilité',
+    body: "Nos formations s'adaptent à votre emploi du temps — en ligne, en présentiel ou en hybride — pour lever toutes les barrières à l'apprentissage.",
   },
   {
-    title: 'Collaborative',
-    body: 'Great work happens in teams. I love working with developers, marketers, and founders.',
+    title: 'Excellence pédagogique',
+    body: 'Nos formateurs sont certifiés, expérimentés et régulièrement formés aux méthodes les plus récentes en didactique des langues.',
   },
   {
-    title: 'Thoughtful Details',
-    body: 'Polish matters. Micro-interactions, spacing, typography—the details create delight.',
+    title: 'Résultats concrets',
+    body: "Nous mesurons votre progression à chaque étape. L'objectif n'est pas de suivre des cours, c'est de progresser vraiment.",
   },
 ];
 
@@ -159,11 +159,11 @@ export default function HatchValues() {
             <StepDots active={active} onChange={setActive} />
 
             <h2 className="font-display mt-8 text-[28px] leading-[1.05]">
-              My Values
+              Nos valeurs
             </h2>
 
             <p className="text-muted-foreground mt-4 max-w-[42ch] text-base leading-relaxed">
-              These principles guide every project and decision I make.
+              Ces principes guident chaque formation et chaque relation avec nos apprenants.
             </p>
 
             <div className="mt-16 flex gap-4">
@@ -173,7 +173,7 @@ export default function HatchValues() {
                 className="h-11 w-auto rounded-full px-6"
               >
                 <a href="/contact">
-                  Get a quote <ArrowRight className="ml-2 size-4" />
+                  Demander un devis <ArrowRight className="ml-2 size-4" />
                 </a>
               </Button>
 
@@ -182,7 +182,7 @@ export default function HatchValues() {
                 variant="outline"
                 className="h-11 w-auto rounded-full px-6"
               >
-                <a href="/contact">Book a call</a>
+                <a href="/contact">Nous appeler</a>
               </Button>
             </div>
           </div>

@@ -8,26 +8,26 @@ import { Highlighter } from '@/components/ui/highlighter';
 const steps = [
   {
     number: '01',
-    title: 'Échange et cadrage',
+    title: 'Évaluation et positionnement',
     description:
-      'Nous clarifions vos obligations, le niveau attendu et le format le plus pertinent pour votre établissement.',
-    detail: 'Analyse du besoin, du public et des contraintes de planning.',
+      'Nous identifions votre niveau de départ, vos objectifs linguistiques et votre disponibilité pour construire un parcours sur mesure.',
+    detail: 'Test de niveau, échange avec un conseiller pédagogique, choix du format.',
     Icon: MessageCircleMore,
   },
   {
     number: '02',
-    title: 'Formation adaptée',
+    title: 'Parcours personnalisé',
     description:
-      'Le contenu est ajusté à votre activité, à votre organisation et aux situations réellement rencontrées sur le terrain.',
-    detail: 'Supports utiles, cas concrets et pédagogie accessible.',
+      'Votre programme est conçu selon votre profil — cours individuels ou collectifs, en ligne ou en présentiel, au rythme qui vous convient.',
+    detail: 'Contenus adaptés, supports pédagogiques variés, progression régulière.',
     Icon: ClipboardList,
   },
   {
     number: '03',
-    title: 'Application immédiate',
+    title: 'Progression mesurée',
     description:
-      'Les équipes repartent avec des repères simples, des gestes maîtrisés et des méthodes applicables dès le retour sur site.',
-    detail: 'Objectif : rendre la formation utile, claire et durable.',
+      'Vous avancez avec des objectifs clairs, des bilans réguliers et un formateur dédié pour consolider chaque acquis.',
+    detail: 'Objectif : une progression concrète, mesurable et durable.',
     Icon: ShieldCheck,
   },
 ];
@@ -119,17 +119,17 @@ export default function HatchHowItWorks() {
         <div className="mx-auto max-w-2xl text-center">
           <div className="bg-muted text-muted-foreground inline-flex w-fit items-center gap-2 rounded-full px-3 py-1 text-sm">
             <span className="bg-primary inline-flex size-2 rounded-full" />
-            Comment ça se passe ?
+            Comment ça fonctionne ?
           </div>
           <h2 className="font-display mt-5 text-3xl font-semibold leading-[1.08] sm:text-4xl lg:text-5xl">
             <Highlighter action="underline" color="#FF9800">
-              Un deroule net,
+              Un parcours clair,
             </Highlighter>{' '}
-            rassurant et utile pour vos equipes.
+            adapté à votre niveau et à vos objectifs.
           </h2>
           <p className="text-muted-foreground mt-4 text-base leading-7 sm:text-lg">
-            Nous allons a l&apos;essentiel : comprendre votre besoin, former avec clarte
-            et rendre chaque intervention immediatement applicable.
+            Nous allons à l&apos;essentiel : comprendre votre besoin, construire un programme
+            sur mesure et vous accompagner jusqu'à la réussite.
           </p>
         </div>
 
@@ -138,20 +138,11 @@ export default function HatchHowItWorks() {
 
           {/* Left: sticky image */}
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <div className="overflow-hidden rounded-[28px] border border-border/60 shadow-sm">
-              <img
-                src="/images/about/portrait.webp"
-                alt="Formatrice Saniform"
-                className="h-95 w-full object-cover object-center sm:h-105"
-              />
-            </div>
-            {/* Small trust badge below image */}
-            <div className="mt-4 flex items-center gap-2 rounded-2xl border border-border/60 bg-white px-4 py-3 shadow-xs">
-              <span className="flex size-2 rounded-full bg-green-500" />
-              <p className="text-sm font-medium text-foreground/70">
-                Formations certifiées — applicables dès J+1
-              </p>
-            </div>
+            <img
+              src="/images/layout/second_section.webp"
+              alt="Apprentissage linguistique Synapteo"
+              className="h-95 w-full object-cover object-center sm:h-105"
+            />
           </div>
 
           {/* Right: steps */}

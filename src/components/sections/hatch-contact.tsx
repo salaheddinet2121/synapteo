@@ -68,13 +68,13 @@ function FieldLabel({
 
 export default function HatchContact({
   eyebrow = 'CONTACT',
-  title = 'Échangeons sur vos besoins',
-  description = "Vous souhaitez former vos équipes ou structurer vos pratiques en hygiène et sécurité alimentaire ? Parlons de votre établissement.",
+  title = 'Parlons de votre projet linguistique',
+  description = "Vous souhaitez apprendre une langue, former vos équipes ou préparer une certification ? Contactez-nous et nous construirons un parcours adapté à votre situation.",
   formTitle = 'Envoyer un message',
   submitLabel = 'Envoyer',
   subjectPrefix = 'Demande de contact',
-  detailsLabel = 'Détails de votre besoin',
-  detailsPlaceholder = 'Décrivez votre besoin en formation, accompagnement ou mise en conformité...',
+  detailsLabel = 'Décrivez votre besoin',
+  detailsPlaceholder = 'Langue souhaitée, niveau actuel, objectifs, nombre de participants, format préféré...',
 
   phoneLabel = '06 14 51 11 92',
   phoneHref = 'tel:+33614511192',
@@ -173,7 +173,7 @@ export default function HatchContact({
                   </div>
                 ))}
               </div>
-              <span>Des interventions pensées pour les professionnels de la restauration</span>
+              <span>Des formations pensées pour les particuliers, les salariés et les entreprises</span>
             </div>
           </div>
         </div>

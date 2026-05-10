@@ -11,7 +11,7 @@ const HEADER_HEIGHT = 80;
 
 const ITEMS = [
   { label: 'Accueil', href: '/' },
-  { label: 'Catalogue', href: '/catalogue' },
+  { label: 'Nos formations', href: '/catalogue' },
   { label: 'Informations pratiques', href: '/information-pratique' },
   { label: 'À propos', href: '/about' },
 ];
@@ -102,14 +102,14 @@ export default function Navbar() {
             <a
               href="/"
               className="flex shrink-0 items-center gap-2"
-              aria-label="Accueil Saniform"
+              aria-label="Accueil Synapteo"
             >
               <img
-                src="/images/layout/logo.svg"
-                alt="Saniform"
-                width={34}
-                height={28}
-                className="h-[35px] w-[42px]"
+                src="/images/layout/full-logo.svg"
+                alt="Synapteo"
+                width={195}
+                height={36}
+                className="h-6 w-auto sm:h-8"
                 loading="eager"
                 decoding="async"
               />
