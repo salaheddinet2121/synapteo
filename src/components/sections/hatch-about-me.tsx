@@ -37,7 +37,7 @@ export default function HatchAboutMe({
     'Formation en ligne, présentiel et mode hybride',
   ],
   imageSrc = '/images/about/portrait.webp',
-  imageAlt = 'Formatrice Synapteo',
+  imageAlt = 'Synapteo',
 }: HatchAboutMeProps) {
   return (
     <section className="bg-background">
